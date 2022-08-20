@@ -1,0 +1,210 @@
+.abs,
+.homework-heading:after,
+.homework-cards .homework-card figcaption,
+.homework-cards .homework-card:after,
+.news .homework-card figcaption,
+.news .homework-card:after,
+.news .article figcaption {
+  position: absolute;
+}
+.rel,
+.homework-heading,
+.homework-heading strong,
+.homework-cards .homework-card,
+.news .homework-card,
+.news .article {
+  position: relative;
+}
+.fix {
+  position: fixed;
+}
+.dfix {
+  display: inline;
+}
+.dib {
+  display: inline-block;
+}
+.db {
+  display: block;
+}
+.dn {
+  display: none;
+}
+.df,
+.homework-cards,
+.news {
+  display: flex;
+}
+.dif {
+  display: inline-flex;
+}
+.dg {
+  display: grid;
+}
+.dig {
+  display: inline-grid;
+}
+.vm,
+.homework-heading,
+.homework-heading strong,
+.homework-heading span {
+  vertical-align: middle;
+}
+/* body {
+  background: #24282f;
+  font-family: 'Alegreya Sans';
+} */
+.homework-wrapper {
+  padding: 15px;
+}
+.homework-heading {
+  padding: 10px;
+  padding-left: 25px;
+  color: #ccc;
+  margin: 0;
+}
+.homework-heading strong {
+  z-index: 2;
+  background: #24282f;
+  padding: 4px 8px;
+}
+.homework-heading span {
+  font-size: 0.7em;
+  color: #aaa;
+  margin-left: 10px;
+}
+.homework-heading:after {
+  content: '';
+  z-index: 1;
+  bottom: 50%;
+  margin-bottom: -2px;
+  height: 2px;
+  left: 0;
+  right: 0;
+  background: #373d47;
+}
+.homework-cards,
+.news {
+  flex-flow: row wrap;
+}
+.homework-cards .homework-card,
+.news .homework-card {
+  margin: 20px;
+  width: 180px;
+  height: 270px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+  transform-origin: center top;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  transition: 0.3s;
+}
+.homework-cards .homework-card img,
+.news .homework-card img {
+  width: 100%;
+  min-height: 100%;
+}
+.homework-cards .homework-card figcaption,
+.news .homework-card figcaption {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  background: none;
+  /* color: #fff; */
+  color: black;
+  transform: translateY(100%);
+  transition: 0.3s;
+}
+.homework-cards .homework-card:after,
+.news .homework-card:after {
+  content: '';
+  z-index: 10;
+  width: 200%;
+  height: 100%;
+  top: -90%;
+  left: -20px;
+  opacity: 0.1;
+  transform: rotate(45deg);
+  background: linear-gradient(
+    to top,
+    transparent,
+    #fff 15%,
+    rgba(255, 255, 255, 0.5)
+  );
+  transition: 0.3s;
+}
+.homework-cards .homework-card:hover,
+.news .homework-card:hover,
+.homework-cards .homework-card:focus,
+.news .homework-card:focus,
+.homework-cards .homework-card:active,
+.news .homework-card:active {
+  box-shadow: 0 8px 16px 3px rgba(0, 0, 0, 0.6);
+  transform: translateY(-3px) scale(1.05) rotateX(15deg);
+}
+.homework-cards .homework-card:hover figcaption,
+.news .homework-card:hover figcaption,
+.homework-cards .homework-card:focus figcaption,
+.news .homework-card:focus figcaption,
+.homework-cards .homework-card:active figcaption,
+.news .homework-card:active figcaption {
+  transform: none;
+}
+.homework-cards .homework-card:hover:after,
+.news .homework-card:hover:after,
+.homework-cards .homework-card:focus:after,
+.news .homework-card:focus:after,
+.homework-cards .homework-card:active:after,
+.news .homework-card:active:after {
+  transform: rotate(25deg);
+  top: -40%;
+  opacity: 0.15;
+}
+.news .article {
+  overflow: hidden;
+  /* width: 350px; */
+  width: 360px;
+  height: 235px;
+  margin: 20px;
+}
+.news .article img {
+  width: 100%;
+  min-height: 100%;
+  transition: 0.2s;
+}
+.news .article figcaption {
+  font-size: 14px;
+  text-shadow: 0 1px 0 rgba(51, 51, 51, 0.3);
+  color: #fff;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 40px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  background: rgba(6, 18, 53, 0.6);
+  opacity: 0;
+  transform: scale(1.15);
+  transition: 0.2s;
+}
+.news .article figcaption h3 {
+  color: #3792e3;
+  font-size: 16px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.news .article:hover img,
+.news .article:focus img,
+.news .article:active img {
+  filter: blur(3px);
+  transform: scale(0.97);
+}
+.news .article:hover figcaption,
+.news .article:focus figcaption,
+.news .article:active figcaption {
+  opacity: 1;
+  transform: none;
+}
